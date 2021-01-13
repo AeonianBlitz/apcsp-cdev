@@ -7,10 +7,13 @@ int main()
 char firstString[26];
 for (int i = 0; i < 26; i++)
 	{
-	firstString[i] = 97 + i;
-	} 
+	int asciiValue = 97 + i;
+	firstString[i] = asciiValue;
+	}
+firstString[26]='\0';
 
 char secondString[26] = "abcdefghijklmnopqrstuvwxyz";
+secondString[26] = '\0';
 
 if (strcmp(firstString, secondString) == 0)
 	printf("The strings are the same\n");
