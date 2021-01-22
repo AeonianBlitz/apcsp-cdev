@@ -3,7 +3,7 @@
 //
 
 #include <string.h>
-
+#include <stdio.h>
 #include "encrypt.h"
 
 
@@ -22,6 +22,27 @@ char shiftChar(char c, int shift, int direction)
   //   shiftChar('c', 3, 1) : 'f'
   //   shiftChar('S', 2, 0) : 'P'
   //   shiftChar('b', 3, 0) : '8'
+int position;
+int newPosition;
+for(int i = 0; i < CHARS_LEN - 1; i++)
+        {
+        if(CHARS[i] == c)
+                {
+                position = i;
+                }
+        }
+
+if (direction == 0)
+	{
+	newPosition = position - direction;
+	}
+else if (direction == 1)
+	{
+	newPosition = position + direction;
+	}
+
+char encryptedCharacter = CHARS[newPosition];
+return encryptedCharacter;
 }
 
 
