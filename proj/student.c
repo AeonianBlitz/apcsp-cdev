@@ -122,6 +122,7 @@ if (fp == NULL)
 
 if (fp)
 	{
+for(int i = 0; i<100; i++){
 	char buffer1[256];
 	char buffer2[256];
 	char buffer3[256];
@@ -148,6 +149,8 @@ if (fp)
 		createStudent(buffer1, buffer2, age, id);
 		}
 	}
+	}
+fclose(fp);
 }
 
 
