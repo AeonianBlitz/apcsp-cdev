@@ -26,7 +26,11 @@ int position;
 int newPosition;
 for(int i = 0; i < CHARS_LEN; i++)
         {
-        if(CHARS[i] == c)
+	if (c == 32)
+		{
+		continue;
+		}
+        else if(CHARS[i] == c)
                 {
                 position = i;
                 }
